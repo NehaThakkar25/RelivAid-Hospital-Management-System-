@@ -1,0 +1,59 @@
+body {
+  background-color: #EEEEEE
+}
+.nav {
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  padding: 0.1em 1em;
+  color: rgb(2, 2, 2);
+  list-style-type: none;
+}
+
+.nav:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.module-pic {
+  display: none;
+}
+
+.nav-right {
+  float: left;
+}
+
+@media screen and (min-width: 1024px) {
+  .module-pic {
+    display: inline;
+    width: 100%;
+  }
+}
+
+.brand_name{
+  font-weight: 600;
+  font-family: 'Oxygen', sans-serif;
+  color:rgb(2, 2, 2);
+}
+
+.logout{
+  margin-left: 10px;
+}
+
+.profile{
+  border-radius: 15px;
+}
+
+.instructions{
+  text-align: center;
+}
+
+.module-pic{
+  display: none;
+  visibility: none;
+}
