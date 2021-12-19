@@ -5,7 +5,6 @@ import DoctorsListModal from './DoctorsListModal';
 import { RecordGuide } from '../Guides';
 import image from './../../images/Record 1.png';
 import PatientAssignedToday from './PatientAssignedToday';
-import RenderPatientList from './RenderPatientList';
 import { _fetchData, _deleteData, _updateData } from '../helpers';
 import EditModal from './EditModal';
 
@@ -190,41 +189,9 @@ export default class Patientlist extends Component {
 
           <br />
 
-          <Collapse isOpen={this.state.collapse}>
-            <div className="render-patient-list">
-              {/* this component renders the table of patients displaying some details */}
-              <RenderPatientList
-                patientlist={this.state.patientrecords}
-                error={this.state.unassignedError}
-                openDoctorsModal={this.openDoctorsModal}
-                openModal={this.openEditModal}
-                filterText={this.state.filterText}
-                renderEditButton={true}
-                /*
-                    this part is used to enable in-records delete operations
-                    to activate this action, uncomment the code below
-                */
-                // deletepatientrecords={this.deletepatientrecords}
-              />
-            </div>
-          </Collapse>
 
-          <Collapse isOpen={!this.state.collapse}>
-            {/* this component renders the table consisting patietns assigned
-                        to a particular patient */}
-            <RenderPatientList
-              patientlist={this.state.unassignedPatients}
-              openDoctorsModal={this.openDoctorsModal}
-              openModal={this.openEditModal}
-              renderEditButton={false}
-              error={this.state.allPatientError}
-              /*
-                  this part is used to enable in-records delete operations
-                  to activate this action, uncomment the code below
-              */
-              // deletepatientrecords={this.deletepatientrecords}
-            />
-          </Collapse>
+
+
 
           {/* this component opens when the "Assign Doctor" button clicked
                     it allows user to assign doctor to a patient */}

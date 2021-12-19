@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card } from 'reactstrap';
-import {MdArrowBack} from 'react-icons/md';
+import { MdArrowBack } from 'react-icons/md';
 import FreeScrollBar from 'react-free-scrollbar';
-import SearchBar from '../Records Module/SearchBar';
+//import SearchBar from '../Records Module/SearchBar';
 
 class Row extends React.Component {
   handleFetchDetails = () => {
@@ -52,13 +52,7 @@ class PreviousVisits extends React.Component {
         </div>
         <h6 className="text-center"> Previous Visit Details</h6>
         <div className="offset-md-1">
-          {/* <SearchBar
-            filterText={this.state.filterText}
-            onFilterTextChange={this.handleFilterTextChange}
-            placeholder="Search by date..."
-            size={35}
-            width="75%"
-          /> */}
+
           <input
             className="form-control"
             placeholder="search by date..."

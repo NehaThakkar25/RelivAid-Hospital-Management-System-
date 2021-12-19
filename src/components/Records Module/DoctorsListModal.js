@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import SearchBar from './SearchBar';
+//import SearchBar from './SearchBar';
 import Notifications, { notify } from 'react-notify-toast';
 import { _fetchData, _postData } from '../helpers';
 
@@ -130,8 +130,7 @@ class DoctorsListModal extends React.Component {
        * The notification color was set with the variable myColor above.
        */
       notify.show(
-        `Patient with id: ${
-          this.props.patientId
+        `Patient with id: ${this.props.patientId
         } has been assigned to Dr. ${name}!`,
         'custom',
         3000,
@@ -160,13 +159,7 @@ class DoctorsListModal extends React.Component {
           </ModalHeader>
           <ModalBody>
             <Notifications options={{ zIndex: 200, top: '50px' }} />
-            <SearchBar
-              filterText={this.state.filterText}
-              onFilterTextChange={this.handleFilterTextChange}
-              placeholder="Search for a doctor..."
-              width="60rem"
-              size={45}
-            />
+
             <br />
             {/* This renders the table displaying the list doctor */}
             <DoctorsTable
